@@ -5,7 +5,12 @@ package com.hangduykhiem.zlist.core.base
  *
  * Created by deank on 12/26/16.
  */
-abstract class BasePresenter<T>(var view: T?){
+abstract class BasePresenter<T: BaseView>(){
 
+    var view: T? = null
+
+    /**
+     * Initialize method that is call when a BaseView implementation is created
+     */
     abstract fun initialize()
 }
