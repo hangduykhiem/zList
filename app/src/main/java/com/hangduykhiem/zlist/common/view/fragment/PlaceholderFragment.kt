@@ -1,4 +1,4 @@
-package com.hangduykhiem.zlist.view.fragment
+package com.hangduykhiem.zlist.common.view.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

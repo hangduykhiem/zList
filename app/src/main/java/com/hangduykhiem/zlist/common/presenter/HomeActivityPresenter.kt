@@ -1,7 +1,7 @@
-package com.hangduykhiem.zlist.presenter
+package com.hangduykhiem.zlist.common.presenter
 
 import com.hangduykhiem.zlist.core.base.BasePresenter
-import com.hangduykhiem.zlist.view.activity.HomeActivityView
+import com.hangduykhiem.zlist.common.view.activity.HomeActivityView
 import javax.inject.Inject
 
 /**

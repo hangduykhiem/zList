@@ -1,7 +1,7 @@
-package com.hangduykhiem.zlist.di
+package com.hangduykhiem.zlist.common.di
 
 import com.hangduykhiem.zlist.ZListApplication
-import com.hangduykhiem.zlist.view.activity.HomeActivity
+import com.hangduykhiem.zlist.common.view.activity.HomeActivity
 import dagger.Component
 import dagger.Module
 

@@ -1,4 +1,4 @@
-package com.hangduykhiem.zlist.view.activity
+package com.hangduykhiem.zlist.common.view.activity
 
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -11,8 +11,8 @@ import android.view.MenuItem
 import com.hangduykhiem.zlist.R
 import com.hangduykhiem.zlist.ZListApplication
 import com.hangduykhiem.zlist.core.base.BaseActivity
-import com.hangduykhiem.zlist.presenter.HomeActivityPresenter
-import com.hangduykhiem.zlist.view.adapter.HomeViewPagerAdapter
+import com.hangduykhiem.zlist.common.presenter.HomeActivityPresenter
+import com.hangduykhiem.zlist.common.view.adapter.HomeViewPagerAdapter
 import javax.inject.Inject
 
 /**

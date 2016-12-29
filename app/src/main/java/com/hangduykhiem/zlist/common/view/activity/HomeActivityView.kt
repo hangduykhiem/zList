@@ -1,4 +1,4 @@
-package com.hangduykhiem.zlist.view.activity
+package com.hangduykhiem.zlist.common.view.activity
 
 import com.hangduykhiem.zlist.core.base.BaseView
 

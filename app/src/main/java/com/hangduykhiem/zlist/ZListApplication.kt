@@ -2,8 +2,8 @@ package com.hangduykhiem.zlist
 
 import android.app.Application
 import com.hangduykhiem.zlist.ZListApplication.ZListApplication.applicationComponent
-import com.hangduykhiem.zlist.di.ApplicationComponent
-import com.hangduykhiem.zlist.di.DaggerApplicationComponent
+import com.hangduykhiem.zlist.common.di.ApplicationComponent
+import com.hangduykhiem.zlist.common.di.DaggerApplicationComponent
 
 /**
  * [Application] implementation for this application

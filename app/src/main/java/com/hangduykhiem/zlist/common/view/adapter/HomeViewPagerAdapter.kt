@@ -1,10 +1,10 @@
-package com.hangduykhiem.zlist.view.adapter
+package com.hangduykhiem.zlist.common.view.adapter
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-import com.hangduykhiem.zlist.view.fragment.PlaceholderFragment
+import com.hangduykhiem.zlist.common.view.fragment.PlaceholderFragment
 
 /**
  * Fragment adapter for Home Activity
