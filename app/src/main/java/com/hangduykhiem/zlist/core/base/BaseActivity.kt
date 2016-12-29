@@ -26,6 +26,13 @@ abstract class BaseActivity<T: BaseView, out V:BasePresenter<T>> : AppCompatActi
         onActivityInitialized()
     }
 
+    @CallSuper
+    override fun onDestroy() {
+        // unSubscribe all subscription in the presenter
+        getPresenter().destroy()
+        super.onDestroy()
+    }
+
     /**
      * Override to provide the Presenter with view.
      * This method is call before the presenter.initialize()
