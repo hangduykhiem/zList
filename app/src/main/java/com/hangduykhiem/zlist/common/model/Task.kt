@@ -7,7 +7,6 @@ import java.util.*
  *
  * Created by hduykhiem on 16/12/2016.
  */
-
 data class Task(val id: Long,
                 val name:String,
                 val description: String,

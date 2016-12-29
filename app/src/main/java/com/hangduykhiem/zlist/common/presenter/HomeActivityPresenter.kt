@@ -9,8 +9,7 @@ import javax.inject.Inject
  *
  * Created by hduykhiem on 16/12/2016.
  */
-class HomeActivityPresenter @Inject constructor()
-    : BasePresenter<HomeActivityView>() {
+class HomeActivityPresenter @Inject constructor() : BasePresenter<HomeActivityView>() {
 
     override fun initialize() {
 

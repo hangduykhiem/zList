@@ -48,7 +48,7 @@ class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), Ho
         setSupportActionBar(toolbar)
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        homeViewPagerAdapter = HomeViewPagerAdapter(supportFragmentManager)
+        homeViewPagerAdapter = HomeViewPagerAdapter(supportFragmentManager, applicationContext)
 
         // Set up the ViewPager with the sections adapter.
         viewPager = findViewById(R.id.container) as ViewPager

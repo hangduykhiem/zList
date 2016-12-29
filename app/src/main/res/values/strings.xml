@@ -2,4 +2,7 @@
     <string name="app_name">zList</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="f_d_title">Daily</string>
+    <string name="f_r_title">Recurring</string>
+    <string name="f_g_title">Goal</string>
 </resources>

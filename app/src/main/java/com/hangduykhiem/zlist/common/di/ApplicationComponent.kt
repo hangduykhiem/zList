@@ -2,6 +2,7 @@ package com.hangduykhiem.zlist.common.di
 
 import com.hangduykhiem.zlist.ZListApplication
 import com.hangduykhiem.zlist.common.view.activity.HomeActivity
+import com.hangduykhiem.zlist.common.view.fragment.DailyFragment
 import dagger.Component
 import dagger.Module
 
@@ -19,7 +20,7 @@ interface ApplicationComponent {
     fun inject(homeActivity: HomeActivity)
 
     /**
-     * Inject to Application
+     * Inject to DailyFragment
      */
-    fun inject(application: ZListApplication)
+    fun  inject(dailyFragment: DailyFragment)
 }
