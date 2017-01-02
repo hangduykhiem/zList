@@ -1,5 +1,6 @@
 package com.hangduykhiem.zlist.goal.view.activity;
 
+import com.hangduykhiem.zlist.R;
 import com.hangduykhiem.zlist.core.base.BaseActivity;
 import com.hangduykhiem.zlist.goal.presenter.AddGoalActivityPresenter;
 
@@ -12,7 +13,6 @@ import org.jetbrains.annotations.NotNull;
  */
 public class AddGoalActivity extends BaseActivity<AddGoalActivityView, AddGoalActivityPresenter> {
 
-
     @Override
     public void setPresenterView() {
 
@@ -20,7 +20,7 @@ public class AddGoalActivity extends BaseActivity<AddGoalActivityView, AddGoalAc
 
     @Override
     public int getMainViewId() {
-        return 0;
+        return R.layout.activity_fragment_container;
     }
 
     @NotNull
