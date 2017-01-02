@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import android.support.annotation.CallSuper
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import butterknife.ButterKnife
 
 /**
  * Base activity of the application, to be extended later
@@ -23,6 +24,7 @@ abstract class BaseActivity<T: BaseView, out V:BasePresenter<T>> : AppCompatActi
         val p = getPresenter()
         setPresenterView()
         p.initialize()
+        ButterKnife.bind(this)
         onActivityInitialized()
     }
 

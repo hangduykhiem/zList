@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import butterknife.ButterKnife
 
 /**
  * Base [Fragment] for the application, to be extended later
@@ -21,7 +22,9 @@ abstract class BaseFragment<T: BaseView, out V:BasePresenter<T>> : Fragment() {
         setPresenterView()
         p.initialize()
         onFragmentInitialized()
-        return inflater!!.inflate(getMainViewId(), container, false)
+        val v = inflater!!.inflate(getMainViewId(), container, false)
+        ButterKnife.bind(this, v)
+        return v
     }
 
     /**
