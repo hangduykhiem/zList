@@ -45,7 +45,7 @@ class AddGoalActivity : BaseActivity<AddGoalActivityView, AddGoalActivityPresent
     }
 
     override fun injectDependencies() {
-        ZListApplication.ZListApplication.applicationComponent.inject(this)
+        ZListApplication.applicationComponent.inject(this)
     }
 }
 

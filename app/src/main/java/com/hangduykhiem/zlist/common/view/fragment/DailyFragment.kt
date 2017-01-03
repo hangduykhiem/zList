@@ -1,5 +1,6 @@
 package com.hangduykhiem.zlist.common.view.fragment
 
+import android.support.design.widget.FloatingActionButton
 import android.widget.Button
 import butterknife.BindView
 import com.hangduykhiem.zlist.R
@@ -18,8 +19,6 @@ class DailyFragment : BaseFragment<DailyFragmentView, DailyFragmentPresenter>(),
 
     @Inject
     lateinit var dailyFragmentPresenter: DailyFragmentPresenter
-    @BindView(R.id.common_fab)
-    lateinit var button: Button
 
     override fun setPresenterView() {
         dailyFragmentPresenter.view = this
@@ -34,7 +33,6 @@ class DailyFragment : BaseFragment<DailyFragmentView, DailyFragmentPresenter>(),
     }
 
     override fun onFragmentInitialized() {
-        button.setOnClickListener { navigateToAddGoal() }
     }
 
     override fun injectDependencies() {

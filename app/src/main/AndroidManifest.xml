@@ -9,6 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <activity
             android:name="com.hangduykhiem.zlist.common.view.activity.HomeActivity"
             android:label="@string/app_name">
@@ -17,6 +18,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".goal.view.activity.AddGoalActivity"
+            android:label="@string/app_name">
         </activity>
     </application>
 

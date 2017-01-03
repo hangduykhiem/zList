@@ -17,13 +17,13 @@ abstract class BaseFragment<T: BaseView, out V:BasePresenter<T>> : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         injectDependencies()
+        val v = inflater!!.inflate(getMainViewId(), container, false)
+        ButterKnife.bind(this, v)
         Log.d("BaseActivity", "onCreate")
         val p = getPresenter()
         setPresenterView()
         p.initialize()
         onFragmentInitialized()
-        val v = inflater!!.inflate(getMainViewId(), container, false)
-        ButterKnife.bind(this, v)
         return v
     }
 

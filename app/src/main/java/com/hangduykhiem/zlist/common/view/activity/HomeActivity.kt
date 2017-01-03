@@ -13,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.hangduykhiem.zlist.R
 import com.hangduykhiem.zlist.ZListApplication
+import com.hangduykhiem.zlist.common.Navigator
 import com.hangduykhiem.zlist.common.presenter.HomeActivityPresenter
 import com.hangduykhiem.zlist.common.view.adapter.HomeViewPagerAdapter
 import com.hangduykhiem.zlist.core.base.BaseActivity
@@ -68,9 +69,15 @@ class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), Ho
         tabLayout.setupWithViewPager(viewPager)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        fab.setOnClickListener { navigateToAddActivities() }
+    }
+
+    /**
+     * Function to navigate to the right add activity
+     */
+    private fun navigateToAddActivities() {
+        when(viewPager!!.currentItem){
+            0, 1, 2 -> Navigator.navigateToAddGoalActivity(this)
         }
     }
 
