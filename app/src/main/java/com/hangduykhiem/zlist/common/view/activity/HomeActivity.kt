@@ -13,10 +13,9 @@ import android.view.Menu
 import android.view.MenuItem
 import com.hangduykhiem.zlist.R
 import com.hangduykhiem.zlist.ZListApplication
-import com.hangduykhiem.zlist.core.base.BaseActivity
 import com.hangduykhiem.zlist.common.presenter.HomeActivityPresenter
 import com.hangduykhiem.zlist.common.view.adapter.HomeViewPagerAdapter
-import com.hangduykhiem.zlist.goal.view.activity.AddGoalActivity
+import com.hangduykhiem.zlist.core.base.BaseActivity
 import javax.inject.Inject
 
 /**
@@ -27,8 +26,8 @@ import javax.inject.Inject
  */
 class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), HomeActivityView {
 
-    companion object{
-        fun launchActivity(context: Context){
+    companion object {
+        fun launchActivity(context: Context) {
             val intent = Intent(context, HomeActivity::class.java)
             ActivityCompat.startActivity(context, intent, null)
         }
