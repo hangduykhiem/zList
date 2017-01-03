@@ -4,9 +4,9 @@ import android.widget.Button
 import butterknife.BindView
 import com.hangduykhiem.zlist.R
 import com.hangduykhiem.zlist.ZListApplication
+import com.hangduykhiem.zlist.common.Navigator
 import com.hangduykhiem.zlist.common.presenter.DailyFragmentPresenter
 import com.hangduykhiem.zlist.core.base.BaseFragment
-import timber.log.Timber
 import javax.inject.Inject
 
 /**
@@ -38,13 +38,13 @@ class DailyFragment : BaseFragment<DailyFragmentView, DailyFragmentPresenter>(),
     }
 
     override fun injectDependencies() {
-        ZListApplication.ZListApplication.applicationComponent.inject(this)
+        ZListApplication.applicationComponent.inject(this)
     }
 
     /**
      * Method to navigate to add goal
      */
     private fun navigateToAddGoal() {
-        Timber.d("Navigating to Add Goal")
+        Navigator.navigateToAddGoalActivity(context)
     }
 }

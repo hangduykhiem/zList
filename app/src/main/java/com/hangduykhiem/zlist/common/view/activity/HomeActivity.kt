@@ -1,8 +1,11 @@
 package com.hangduykhiem.zlist.common.view.activity
 
+import android.content.Context
+import android.content.Intent
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.design.widget.TabLayout
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.Toolbar
@@ -13,6 +16,7 @@ import com.hangduykhiem.zlist.ZListApplication
 import com.hangduykhiem.zlist.core.base.BaseActivity
 import com.hangduykhiem.zlist.common.presenter.HomeActivityPresenter
 import com.hangduykhiem.zlist.common.view.adapter.HomeViewPagerAdapter
+import com.hangduykhiem.zlist.goal.view.activity.AddGoalActivity
 import javax.inject.Inject
 
 /**
@@ -22,6 +26,13 @@ import javax.inject.Inject
  * Created by hduykhiem on 17/12/2016.
  */
 class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), HomeActivityView {
+
+    companion object{
+        fun launchActivity(context: Context){
+            val intent = Intent(context, HomeActivity::class.java)
+            ActivityCompat.startActivity(context, intent, null)
+        }
+    }
 
     @Inject
     internal lateinit var homeActivityPresenter: HomeActivityPresenter
@@ -40,7 +51,7 @@ class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), Ho
     private var viewPager: ViewPager? = null
 
     override fun injectDependencies() {
-        ZListApplication.ZListApplication.applicationComponent.inject(this)
+        ZListApplication.applicationComponent.inject(this)
     }
 
     override fun onActivityInitialized() {
@@ -95,7 +106,4 @@ class HomeActivity : BaseActivity<HomeActivityView, HomeActivityPresenter>(), Ho
     override fun getPresenter(): HomeActivityPresenter {
         return homeActivityPresenter
     }
-
-
-
 }

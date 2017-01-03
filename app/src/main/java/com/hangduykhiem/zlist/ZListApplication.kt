@@ -1,7 +1,6 @@
 package com.hangduykhiem.zlist
 
 import android.app.Application
-import com.hangduykhiem.zlist.ZListApplication.ZListApplication.applicationComponent
 import com.hangduykhiem.zlist.common.di.ApplicationComponent
 import com.hangduykhiem.zlist.common.di.DaggerApplicationComponent
 
@@ -12,7 +11,7 @@ import com.hangduykhiem.zlist.common.di.DaggerApplicationComponent
  */
 class ZListApplication : Application() {
 
-    object ZListApplication{
+    companion object {
         lateinit var applicationComponent: ApplicationComponent
     }
 
